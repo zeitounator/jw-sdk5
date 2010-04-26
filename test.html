@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>JW Player Testing</title>
+	<link rel="stylesheet" href="files/style.css" type="text/css">
+	<script type="text/javascript" src="files/swfobject.js"></script>
+</head>
+<body>
+    <div id="mediaplayer"></div>
+
+    <script type="text/javascript">
+        var params = {
+            allowfullscreen: 'true',
+            allowscriptaccess: 'always',
+            wmode: 'opaque'
+        };
+
+       var flashvars = {
+            file: 'cerimes/sample1_150kbps.f4v',
+            streamer: 'rtmpt://mediaFM01.cines.fr/3517mpeg/cerimes',
+            plugins: 'hd-1',
+            'hd.file': 'mp4:cerimes/sample1_150kbps.f4v',
+        };
+        /*var flashvars = {
+            file: 'utm/lesemigresdelapampa',
+            streamer: 'rtmpt://mediaFM01.cines.fr/3517/cerimes',
+        };*/ 
+        swfobject.embedSWF('players/5.1.swf', 'mediaplayer', '300', '250', '9', params, flashvars);
+    </script>
+</body>
+</html>
